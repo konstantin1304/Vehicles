@@ -8,7 +8,7 @@ namespace Vehicles
 {
     interface ICargo
     {
-        double MaxCarryingCapacity { get; set; }
+        double MaxCarryingCapacity { get;}
 
     }
 }

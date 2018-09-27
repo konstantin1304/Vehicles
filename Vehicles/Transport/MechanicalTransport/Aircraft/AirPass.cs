@@ -8,14 +8,18 @@ namespace Vehicles
 {
     class AirPass : Aircraft, IPassenger, ILiquidSystem
     {
-        public int PassengersNumber { get ; set ; }
-        public double EngineVolume { get ; set ; }
-        public double Consumpton { get ; set ; }
-        public double TankVolume { get ; set ; }
+        public AirPass(string brandName, string model, int weight, int maxSpeed, string color, int price) : base(brandName, model, weight, maxSpeed, color, price)
+        {
+        }
+
+        public int PassengersNumber { get ;  protected set; }
+        public double EngineVolume { get ;  protected set; }
+        public double Consumpton { get ;  protected set; }
+        public double TankVolume { get ;  protected set; }
 
         public void TankUp(double fuelLiters)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Заправляем {fuelLiters} литров топлива в пассажирский самолёт {Name}");
         }
     }
 }

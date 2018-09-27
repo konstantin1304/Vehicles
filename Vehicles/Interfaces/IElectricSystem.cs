@@ -8,8 +8,8 @@ namespace Vehicles
 {
     interface IElectricSystem
     {
-        double Consumpton { get; set; }
-        double BatteryVolume { get; set; }
+        double Consumpton { get;}
+        double BatteryVolume { get;}
 
         void Charging(double mHa);
     }

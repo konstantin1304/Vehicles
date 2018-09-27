@@ -6,16 +6,28 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class Transport : ITransport
+    public abstract class Transport : ITransport
     {
-        public int Weight { get; set; }
-        public int MaxSpeed { get; set; }
-        public string Color { get; set; }
-        public int Price { get; set; }
+        public int Weight { get;  protected set; }
+        public int MaxSpeed { get;  protected set; }
+        public string Color { get;  protected set; }
+        public int Price { get;  protected set; }
+        public string BrandName { get; protected set; }
+        public string Model { get; protected set; }
 
-        public void Move()
+        public abstract string Name { get; protected set; }
+
+        public abstract void Move();
+        public abstract void Stop();
+
+        public Transport(int weight, int maxSpeed, string color, int price, string brandName, string model) 
         {
-            throw new NotImplementedException();
+            BrandName = brandName;
+            Model = model;
+            Weight = weight;
+            MaxSpeed = maxSpeed;
+            Color = color;
+            Price = price;
         }
     }
 }

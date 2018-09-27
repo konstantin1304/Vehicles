@@ -8,9 +8,9 @@ namespace Vehicles
 {
     interface ILiquidSystem
     {
-        double EngineVolume{ get; set; }
-        double Consumpton{ get; set; }
-        double TankVolume { get; set; }
+        double EngineVolume{ get;}
+        double Consumpton{ get;}
+        double TankVolume { get;}
 
         void TankUp(double fuelLiters);
     }

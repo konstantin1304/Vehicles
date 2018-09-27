@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    class Train : MechanicalTransport
+    public abstract class Train : MechanicalTransport
     {
-
+        public Train(string brandName, string model, int weight, int maxSpeed, string color, int price) : base(brandName, model, weight, maxSpeed, color, price)
+        {
+        }
     }
 }

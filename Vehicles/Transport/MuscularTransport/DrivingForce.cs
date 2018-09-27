@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class DrivingForce
+    public abstract class DrivingForce
     {
-        public double SleepEndurance { get; set; }
-        public double FeedEndurance { get; set; }
+        public DrivingForce(double sleepEndurance, double feedEndurance, string name, string kindName)
+        {
+            SleepEndurance = sleepEndurance;
+            FeedEndurance = feedEndurance;
+            Name = name;
+            KindName = kindName;
+        }
 
-        public void FeedUp(double foodKg)
-        {
-        }
-        public void SleepUp(double hours)
-        {
-        }
+        public double SleepEndurance { get; protected set; }
+        public double FeedEndurance { get; protected set; }
+        public string Name { get; protected set; }
+        public string KindName { get; protected set; }
+
+        public abstract void FeedUp(double foodKg);
+
+        public abstract void SleepUp(double hours);
+       
     }
 }

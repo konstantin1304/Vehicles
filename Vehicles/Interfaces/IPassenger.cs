@@ -8,6 +8,6 @@ namespace Vehicles
 {
     interface IPassenger
     {
-        int PassengersNumber { get; set; }
+        int PassengersNumber { get;}
     }
 }

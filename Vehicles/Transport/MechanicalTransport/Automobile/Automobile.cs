@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class Automobile : MechanicalTransport
+    public abstract class Automobile : MechanicalTransport
     {
-
+        public Automobile(string brandName, string model, int weight, int maxSpeed, string color, int price) : base(brandName, model, weight, maxSpeed, color, price)
+        {
+        }
     }
 }

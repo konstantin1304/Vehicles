@@ -9,5 +9,6 @@ namespace Vehicles
     interface ITransport
     {
         void Move();
+        void Stop();
     }
 }

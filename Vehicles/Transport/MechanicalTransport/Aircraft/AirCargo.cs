@@ -8,14 +8,18 @@ namespace Vehicles
 {
     class AirCargo : Aircraft, ICargo, ILiquidSystem
     {
-        public double MaxCarryingCapacity { get ; set ; }
-        public double EngineVolume { get ; set ; }
-        public double Consumpton { get ; set ; }
-        public double TankVolume { get ; set ; }
+        public AirCargo(string brandName, string model, int weight, int maxSpeed, string color, int price) : base(brandName, model, weight, maxSpeed, color, price)
+        {
+        }
+
+        public double MaxCarryingCapacity { get ;  protected set; }
+        public double EngineVolume { get ;  protected set; }
+        public double Consumpton { get ;  protected set; }
+        public double TankVolume { get ;  protected set; }
 
         public void TankUp(double fuelLiters)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Заправляем {fuelLiters} литров топлива в грузовой самолёт {Name}");
         }
     }
 }

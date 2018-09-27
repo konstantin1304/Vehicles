@@ -8,13 +8,20 @@ namespace Vehicles
 {
     class AutoElectric : Automobile, IPassenger, IElectricSystem
     {
-        public int PassengersNumber { get ; set ; }
-        public double Consumpton { get ; set ; }
-        public double BatteryVolume { get ; set ; }
+        public AutoElectric(int passengersNumber, double consumpton, double batteryVolume, string brandName, string model, int weight, int maxSpeed, string color, int price) : base(brandName, model, weight, maxSpeed, color, price)
+        {
+            PassengersNumber = passengersNumber;
+            Consumpton = consumpton;
+            BatteryVolume = batteryVolume;
+        }
+
+        public int PassengersNumber { get ;  protected set; }
+        public double Consumpton { get ;  protected set; }
+        public double BatteryVolume { get ;  protected set; }
 
         public void Charging(double mHa)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Поступление {mHa} электроэнергии в электромобиль {Name}");
         }
     }
 }
